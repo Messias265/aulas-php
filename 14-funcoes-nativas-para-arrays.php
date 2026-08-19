@@ -134,7 +134,13 @@ $servicos = [
 
 
     <h2>array filter()</h2>
-
+    <p>Retorna valores para um novo array baseado em alguma condição/critério.</p>
+<?php 
+$servicosConcluidos = array_filter(
+    $servicos, fn( array $servico):boo1 => $servico["status"] === "Concluído"
+);
+?>
+    <pre><?php var_dump($servicosConcluidos) ?></pre>
 </div>
     
 
