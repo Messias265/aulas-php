@@ -102,6 +102,7 @@ $produtos = array_unique(
 
         <h2>array_map()</h2>
         <p>Percorre cada elemento de um array, executa uma função (chamada de callback) e gera um novo array com os resultados.</p>
+
 <?php 
 $catalogoComDesconto = array_map(function($preco):float {
     return $preco - $preco * 0.10;
@@ -113,7 +114,27 @@ $catalogoComDesconto = array_map(function($preco):float {
     <pre> <?php var_dump($catalogoComDesconto) ?></pre>
     <hr>
 
+    <h2>array colum</h2>
+    <p>Retorna um novo array com os valores de uma determinada chave associativa.</p>
+<?php 
+$servicos = [
+    ["codigo" => 3, "tipo" => "Limpeza", "status" => "Concluído"],
+    ["codigo" => 12, "tipo" => "Manutenção", "status" => "Concluído"],
+    ["codigo" => 1, "tipo" => "Reparo", "status" => "Pendente"],
+    ["codigo" => 7, "tipo" => "Consultoria", "status" => "Concluído"],
+    ["codigo" => 4, "tipo" => "Instalação", "status" => "Concluído"]
+];    
+ $tipoServicos = array_column($servicos, "tipo");
+?>
+    <pre><?php var_dump($tipoServicos) ?></pre>
+
+
+    <hr>
+
+
+
     <h2>array filter()</h2>
+
 </div>
     
 
